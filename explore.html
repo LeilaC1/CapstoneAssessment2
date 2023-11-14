@@ -33,7 +33,35 @@
             </div>
           </nav>
     </header>
-<main>
+<main class="container" style="padding-top: 20px;">
+  <div>
+    <h1>Mountains Information Page</h1>
+  </div>
+  <div class="col" style="padding-top: 10px;">
+    <label for="mountains" id="mountains" class="form-label"> <b> Select Mountain</b></label>
+    <select id="mountains" class="form-select" required>
+      <option selected>Open this select menu</option>
+    </select>
+    <div style="padding-top: 10px;">
+      <button id="selectMountainsBtn" class="btn btn-dark">Select</button>
+    </div>
+<!--display card -->
+<div style="padding-top: 30px;">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <p id="mountName">Name: </p>
+          <p id="mountDescription">Description: </p>
+          <p id="mountElevation">Elevation: </p>
+          <p id="otherInformantion">others: </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- stretch goals-->
+
 
 
 </main>
