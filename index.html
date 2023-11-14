@@ -1,46 +1,124 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Capstone 2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Park Searches</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="search.html">Search</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="explore.html">Explore</a>
-                  </li>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+                <a class="navbar-brand" href="#">Park Searches</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="explore.html">Explore</a>
+                        </li>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
-<main>
+
+    <main class="container">
+        <!--carousel x mountain images-->
+        <main class="container">
+            <!--carousel x mountain images-->
+            <div id="carouselExample" class="carousel slide" style="padding-top: 15px;">
+                <div class="carousel-inner" style="border: 10px rgb(197, 214, 229) outset;  border-radius: 50px;">
+                    <div class="carousel-item active">
+                        <img src="images/Liberty-StoryImage_2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Eisenhower-StoryImage_2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/CDome-StoryImage.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        <div class="container text-center" style="padding-top: 10px; padding-bottom: 10px;">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+<p>
+<b> ParkSearches.com</b> is your ultimate online destination for discovering and planning outdoor adventures. Our user-friendly website allows you to effortlessly search and explore a vast database of national 
+parks and mountains worldwide. Whether you're an avid hiker, nature enthusiast, or thrill-seeker, our platform provides detailed information on each destination, including trail difficulty, elevation, 
+and breathtaking scenery. With interactive maps and comprehensive guides, planning your next mountain ascent or national park expedition has never been easier.
+Join our community of outdoor enthusiasts and embark on unforgettable journeys with<b> ParkSearches.com</b>
+</p>             
+</div>
+</div>
+   </div>
+            <div class="row">
+                <div class="col"  style="padding-top: 10px;">
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Search Page</h5>
+                            <p class="card-text">Discover your next breathtaking adventure with our comprehensive search page, 
+                                where you can effortlessly find and explore a diverse array of national parks and mountains tailored to your preferences.
+                            </p>
+                            <a href="search.html" class="btn btn-primary">Go to page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"   style="padding-top: 10px;">
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Explore Page</h5>
+                            <p class="card-text">Immerse yourself in the beauty of the great outdoors, vivid imagery and detailed insights await,
+                                 guiding you through a curated selection of national parks and mountains for your next unforgettable adventure.
+                            </p>
+                            <a href="explore.html" class="btn btn-primary">Go to page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-</main>
+    </main>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
