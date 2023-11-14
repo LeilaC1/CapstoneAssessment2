@@ -41,30 +41,65 @@
     <div>
       <h1>National Parks Search Page</h1>
     </div>
+
+    <!-- add radio for search by ...-->
+<div>
+  <div>
+    <h3>Search By </h3>
+  </div>
+  <div id="radioSection">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="locationRadio">
+    <label class="form-check-label" for="locationRadio">
+Location   
+ </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="parkTypeRadio">
+    <label class="form-check-label" for="parkTypeRadio">
+Park Type    
+</label>
+<div style="padding-top: 15px;">
+  <button id="nextBtn" class="btn btn-dark">Next</button>
+  <button id="resetBtn" class="btn btn-dark">Clear</button>
+</div>
+</div>
+  </div>
+
+
+  </div>
+</div>
+<div id="locationSection" style="display: none;">
+
     <div class="col" style="padding-top: 10px;">
-      <label for="location" id="location" class="form-label"> <b> Select Location</b></label>
+      <h4 style="padding-top: 40px;">Search by Location</h4>
+      <div class="col" style="padding-top: 10px;">
+      <label for="location" class="form-label"> <b> Select Location</b></label>
       <select id="location" class="form-select" required>
         <option selected>Open this select menu</option>
       </select>
       <div style="padding-top: 10px;">
         <button id="selectLocationBtn" class="btn btn-dark">Select</button>
       </div>
-
     </div>
+    </div>
+</div>
 
     <!--make hidden until selectLocationBtn clicked-->
-    <h4 style="padding-top: 40px;">Select Park Type</h4>
+    <div id="parkTypeSection" style="display: none;">
+    <h4 style="padding-top: 40px;">Search by Park Type</h4>
     <div class="col" style="padding-top: 10px;">
-      <label for="parkType" id="parkType" class="form-label"> <b> Select Location</b></label>
+      <label for="parkType" class="form-label"> <b> Park Type</b></label>
       <select id="parkType" class="form-select" required>
-        <option selected>Open this select menu</option>
+        <option selected disabled>Open this select menu</option>
       </select>
       <div style="padding-top: 10px;">
         <button id="selectParkTypeBtn" class="btn btn-dark">Select</button>
       </div>
-
+    </div>
     </div>
     <!--display in card -->
+    <div id="resultSection" style="display: none;">
     <div style="padding-top: 30px;">
       <div class="row">
         <div class="col">
@@ -78,14 +113,17 @@
         </div>
       </div>
     </div>
+    </div>
 <!-- stretch goals-->
 
   </main>
  
 <footer style="text-align: center; margin-top: 15%;" > <p> copy write my work &copy 2023 </p> </footer>
 
-
-
+<script src="scripts/nationalParkData.js"></script>
+<script src="scripts/locationData.js"></script>
+<script src="scripts/parkTypeData.js"></script>
+<script src="scripts/search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
