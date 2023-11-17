@@ -33,7 +33,7 @@ if (locationRadio.checked) {
     document.getElementById("locationSection").style.display = "none";
 } else {
     
-    alert("Please selec way of search.");
+    alert("Please select way of search.");
 }
 }
 function clearForm() {
