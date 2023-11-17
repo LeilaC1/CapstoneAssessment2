@@ -33,35 +33,37 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+          </div>
         </div>
+      </nav>
+    </header>
+    <main class="container" style="padding-top: 20px;">
+      <div>
+        <h1>National Parks Search Page</h1>
       </div>
-    </nav>
-  </header>
-  <main class="container" style="padding-top: 20px;">
-    <div>
-      <h1>National Parks Search Page</h1>
-    </div>
-
-    <!-- add radio for search by ...-->
-<div>
-  <div>
-    <h3>Search By </h3>
-  </div>
-  <div id="radioSection">
+      
+      <!-- add radio for search by ...-->
+      <div>
+        <div>
+          <h3>Search By </h3>
+        </div>
+        <div id="radioSection">
   <div class="form-check">
     <input class="form-check-input" type="radio" id="locationRadio">
     <label class="form-check-label" for="locationRadio">
-Location   
- </label>
+      Location   
+    </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" id="parkTypeRadio">
     <label class="form-check-label" for="parkTypeRadio">
-Park Type    
-</label>
-<div style="padding-top: 15px;">
-  <button id="nextBtn" class="btn btn-dark">Next</button>
-  <button id="resetBtn" class="btn btn-dark">Clear</button>
+      Park Type    
+    </label>
+    <div style="padding-top: 15px;">
+      <!--add view all btn-->
+      <button id="nextBtn" class="btn btn-dark">Next</button>
+      <button id="allBtn" class="btn btn-dark">View All</button>
+  <button id="resetBtn" class="btn btn-dark">Clear All</button>
 </div>
 </div>
   </div>
@@ -87,9 +89,9 @@ Park Type
 
     <!--make hidden until selectLocationBtn clicked-->
     <div id="parkTypeSection" style="display: none;">
-    <h4 style="padding-top: 40px;">Search by Park Type</h4>
-    <div class="col" style="padding-top: 10px;">
-      <label for="parkType" class="form-label"> <b> Park Type</b></label>
+      <h4 style="padding-top: 40px;">Search by Park Type</h4>
+      <div class="col" style="padding-top: 10px;">
+        <label for="parkType" class="form-label"> <b> Park Type</b></label>
       <select id="parkType" class="form-select" required>
         <option selected disabled>Open this select menu</option>
       </select>
@@ -98,7 +100,7 @@ Park Type
       </div>
     </div>
     </div>
-    <!--display in card -->
+    <!--display in seperate card -->
     <div id="resultSection" style="display: none;">
     <div style="padding-top: 30px;">
       <div class="row">
@@ -115,8 +117,24 @@ Park Type
     </div>
     </div>
 <!-- stretch goals-->
-<!--move reset btn to end and make to clear everything on the display/page not radios-->
+<div id="resultForAllSection" style="display: none;">
+  <div style="padding-top: 40px;">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header" style="text-align: center;">
+           <b>  All Parks</b>
+        </div>
+          <div class="card-body">
+            <p id="parkResult2">
 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   </main>
  
 <footer style="text-align: center; margin-top: 15%;" > <p> copy write my work &copy 2023 </p> </footer>

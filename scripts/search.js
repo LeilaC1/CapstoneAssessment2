@@ -21,6 +21,7 @@ window.onload = function() {
     document.getElementById("resetBtn").addEventListener("click", clearForm);
     document.getElementById("selectLocationBtn").addEventListener("click", onSelectLocationBtnClicked);
     document.getElementById("selectParkTypeBtn").addEventListener("click", onSelectParkTypeBtnClicked);
+    document.getElementById("allBtn").addEventListener("click", onAllBtnClicked);
 
 
 }
@@ -36,9 +37,39 @@ if (locationRadio.checked) {
     alert("Please select way of search.");
 }
 }
+// add view all btn
+function onAllBtnClicked(){
+        document.getElementById("resultForAllSection").style.display = "block";
+    
+        let resultText = "";
+        nationalParksArray.forEach(function (nationalPark) {
+            resultText += `<b> Location ID: </b>${nationalPark.LocationID} <br>
+                           <b> Location Name: </b>${nationalPark.LocationName} <br>
+                           <b> Address: </b>${nationalPark.Address} ${nationalPark.City} ${nationalPark.State} ${nationalPark.ZipCode} | Phone: ${nationalPark.Phone} Fax: ${nationalPark.Fax} <br>`;
+            
+            // check its defined
+            if (nationalPark.Visit) {
+                resultText += `<b> Visit: </b> <a href="${nationalPark.Visit}" target="_blank">${nationalPark.Visit}</a> <br>`;
+            }
+    
+            resultText += `<br>`;
+        });
+    
+        document.getElementById("parkResult2").innerHTML = resultText;
+    }
+
+
+
+
+
+
 function clearForm() {
     var locationRadio = document.getElementById("locationRadio");
     var parkTypeRadio = document.getElementById("parkTypeRadio");
+    document.getElementById("locationSection").style.display = "none";
+    document.getElementById("parkTypeSection").style.display = "none";
+    document.getElementById("resultSection").style.display = "none";
+
 
     // uncheck the radio buttons
     locationRadio.checked = false;
@@ -54,33 +85,46 @@ function onSelectLocationBtnClicked(){
     nationalParksArray.forEach(function (nationalPark) {
         if (nationalPark.State === selectedValue) {
             resultText += `<b> Location ID: </b>${nationalPark.LocationID} <br>
-           <b> Location Name: </b>${nationalPark.LocationName} <br>
-           <b> Address: </b>${nationalPark.Address} ${nationalPark.City} ${nationalPark.State} ${nationalPark.ZipCode} | Phone: ${nationalPark.Phone} Fax: ${nationalPark.Fax} ${nationalPark.Visit}<br>`;
-        }
-    });
+            <b> Location Name: </b>${nationalPark.LocationName} <br>
+            <b> Address: </b>${nationalPark.Address} ${nationalPark.City} ${nationalPark.State} ${nationalPark.ZipCode} | Phone: ${nationalPark.Phone} Fax: ${nationalPark.Fax} <br>`;
 
-    //  the accumulated information
+        // check if it's defined/not empty
+        if (nationalPark.Visit) {
+            resultText += `<b> Visit: </b> <a href="${nationalPark.Visit}" target="_blank">${nationalPark.Visit}</a> <br>`;
+        }
+
+        resultText += `<br>`;
+    }
+});
+
+    //  the collected info
     document.getElementById("parkResult").innerHTML = resultText;
 
     // cleared the dropdown to avoid duplicates
     locationSelected.selectedIndex = 0;
 }
     
-    function onSelectParkTypeBtnClicked() {
-        document.getElementById("resultSection").style.display = "block";
-        let parkTypeDropdown = document.getElementById('parkType');
-        let selectedValue = parkTypeDropdown.value;
-        let resultText = ""; // string
-    
-        nationalParksArray.forEach(function (nationalPark) {
-            if (nationalPark.LocationName.includes(selectedValue)) {
-                resultText += `<b> Location ID: </b>${nationalPark.LocationID} <br>
-               <b> Location Name: </b>${nationalPark.LocationName} <br>
-               <b> Address: </b>${nationalPark.Address} ${nationalPark.City} ${nationalPark.State} ${nationalPark.ZipCode} | Phone: ${nationalPark.Phone} Fax: ${nationalPark.Fax} <br>`;
+function onSelectParkTypeBtnClicked() {
+    document.getElementById("resultSection").style.display = "block";
+    let parkTypeDropdown = document.getElementById('parkType');
+    let selectedValue = parkTypeDropdown.value;
+    let resultText = ""; // string
+    nationalParksArray.forEach(function (nationalPark) {
+        if (nationalPark.LocationName.includes(selectedValue)) {
+            resultText += `<b> Location ID: </b>${nationalPark.LocationID} <br>
+                <b> Location Name: </b>${nationalPark.LocationName} <br>
+                <b> Address: </b>${nationalPark.Address} ${nationalPark.City} ${nationalPark.State} ${nationalPark.ZipCode} | Phone: ${nationalPark.Phone} Fax: ${nationalPark.Fax} <br>`;
+
+            // check if it's defined/not empty
+            if (nationalPark.Visit) {
+                resultText += `<b> Visit: </b> <a href="${nationalPark.Visit}" target="_blank">${nationalPark.Visit}</a> <br>`;
             }
-        });
-    
-        document.getElementById("parkResult").innerHTML = resultText;
-    
-        parkTypeDropdown.selectedIndex = 0;
-    }
+
+            resultText += `<br>`;
+        }
+    });
+
+    document.getElementById("parkResult").innerHTML = resultText;
+
+    parkTypeDropdown.selectedIndex = 0;
+}
