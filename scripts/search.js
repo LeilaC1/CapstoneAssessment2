@@ -6,7 +6,7 @@ window.onload = function() {
     locationsArray.forEach(function (location) {
         var option = document.createElement("option");
         option.text = location;
-        dropdownMenuLocation.add(option);
+        dropdownMenuLocation.appendChild(option);
     });
 
     let dropdownMenuParkType = document.getElementById("parkType");
